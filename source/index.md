@@ -8,8 +8,10 @@ toc_footers:
   - <a href='http://ripple.com'>Ripple</a>
 
 includes:
-- getServerInfo
 - connect
+- disconnect
+- getServerInfo
+- getFee
 
 search: true
 ---
@@ -30,6 +32,8 @@ const api = new RippleAPI({
 });
 api.connect().then(() => {
   /* insert code here */
+}).then(() => {
+  return api.disconnect();
 }).catch(console.error);
 ```
 
