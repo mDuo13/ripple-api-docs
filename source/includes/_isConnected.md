@@ -1,4 +1,4 @@
-# isConnected
+## isConnected
 
 ```javascript
 return api.isConnected();

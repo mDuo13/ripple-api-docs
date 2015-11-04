@@ -1,4 +1,4 @@
-# getServerInfo
+## getServerInfo
 
 `getServerInfo(): Promise<object>`
 
@@ -43,7 +43,7 @@ return api.getServerInfo().then(info => {/* ... */});
 
 
 Parameter | Type | Description
---------- | ------- | -----------
+--------- | ---- | -----------
 buildVersion | string | The version number of the running rippled version.
 completedLedgers | string | Range expression indicating the sequence numbers of the ledger versions the local rippled has in its database. It is possible to be a disjoint sequence, e.g. “2500-5000,32570-7695432”.
 hostid | string | On an admin request, returns the hostname of the server running the rippled instance; otherwise, returns a unique four letter word.

@@ -1,4 +1,4 @@
-# disconnect
+## disconnect
 
 `disconnect(): Promise<void>`
 

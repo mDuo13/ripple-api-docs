@@ -1,4 +1,4 @@
-# getLedgerVersion
+## getLedgerVersion
 
 ```javascript
 return api.getLedgerVersion().then(ledgerVersion => {

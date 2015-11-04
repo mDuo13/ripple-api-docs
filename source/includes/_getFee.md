@@ -1,4 +1,4 @@
-# getFee
+## getFee
 
 ```javascript
 return api.getFee().then(fee => {/* ... */});

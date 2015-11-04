@@ -14,6 +14,7 @@ includes:
 - getServerInfo
 - getFee
 - getLedgerVersion
+- getTransaction
 
 search: true
 ---
@@ -44,3 +45,31 @@ All the code snippets assume that you have surrounded them with this boilerplate
 <aside class="notice">
 Dont forget the "catch" or errors may not be visible.
 </aside>
+
+# Concepts
+
+## Account Sequence Number
+
+Every account has a sequence number that is used to order transactions.
+
+## Ripple Address
+
+Every Ripple account has an address
+
+## Transaction Identifier
+
+A hash of the transaction that can be used to identify it.
+
+## Transaction Specification
+
+Specifies a transaction
+
+## Transaction Instructions
+
+Instructions on how to execute a transaction, complements the [transaction specificaition](#transaction-specification).
+
+## Transaction Outcome
+
+Indicates the outcome of a transaction.
+
+# API Methods
