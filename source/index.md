@@ -10,8 +10,10 @@ toc_footers:
 includes:
 - connect
 - disconnect
+- isConnected
 - getServerInfo
 - getFee
+- getLedgerVersion
 
 search: true
 ---
