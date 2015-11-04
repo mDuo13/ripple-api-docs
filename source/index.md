@@ -15,6 +15,7 @@ includes:
 - getFee
 - getLedgerVersion
 - getTransaction
+- getTransactions
 
 search: true
 ---
@@ -24,6 +25,8 @@ search: true
 RippleAPI allows you to query and submit transactions to a node on the Ripple network.
 
 The API is based on ES6 promises.
+
+The API only provides access to *validated* transaction data.
 
 # Boilerplate
 
@@ -48,13 +51,28 @@ Dont forget the "catch" or errors may not be visible.
 
 # Concepts
 
+## Ripple Address
+
+Every Ripple account has an address
+
 ## Account Sequence Number
 
 Every account has a sequence number that is used to order transactions.
 
-## Ripple Address
+## Transaction Types
 
-Every Ripple account has an address
+A transaction type is specified by the strings in the first column in the table below.
+
+Type | Description
+---- | -----------
+payment | A payment
+order | Order
+orderCancellation | Order cancellation
+trustline | Trustline
+settings | Settings
+suspendedPaymentCreation | ...
+suspendedPaymentCancellation | ...
+suspendedPaymentExecution | ...
 
 ## Transaction Identifier
 

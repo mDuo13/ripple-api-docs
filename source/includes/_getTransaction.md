@@ -83,7 +83,7 @@ This method returns a promise that resolves with a transaction object containing
 
 Parameter | Type | Description
 --------- | ---- | -----------
-type | string | One of "payment", "order", "orderCancellation", "trustline", "settings", "suspendedPaymentCreation", "suspendedPaymentCancellation", "suspendedPaymentExecution"
+type | [type](#transaction-types) | Indicates the type of the transaction.
 specification | object | A [transaction specification](#transaction-specification)
 outcome | object | A [transaction outcome](#transaction-outcome)
 id | string | A [transaction identifier](#transaction-identifier)
