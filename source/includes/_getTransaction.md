@@ -70,8 +70,8 @@ Retrieves a transaction by its identifier.
 
 ### Parameters
 
-Parameter | Type | Description
---------- | ---- | -----------
+Name | Type | Description
+---- | ---- | -----------
 identifier | string | A Ripple transaction identifier, a 256-bit hash expressed as a hexadecimal string.
 options | object | Options to limit the ledger versions to search
 *options.* minLedgerVersion | integer | The lowest ledger version to search
@@ -81,8 +81,8 @@ options | object | Options to limit the ledger versions to search
 
 This method returns a promise that resolves with a transaction object containing the following fields.
 
-Parameter | Type | Description
---------- | ---- | -----------
+Name | Type | Description
+---- | ---- | -----------
 type | [type](#transaction-types) | Indicates the type of the transaction.
 specification | object | A [transaction specification](#transaction-specification)
 outcome | object | A [transaction outcome](#transaction-outcome)

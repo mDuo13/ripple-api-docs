@@ -16,6 +16,7 @@ includes:
 - getLedgerVersion
 - getTransaction
 - getTransactions
+- getTrustlines
 
 search: true
 ---

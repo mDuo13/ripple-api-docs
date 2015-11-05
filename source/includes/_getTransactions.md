@@ -70,8 +70,8 @@ Retrieves historical transactions of an account.
 
 ### Parameters
 
-Parameter | Type | Description
---------- | ---- | -----------
+Name | Type | Description
+---- | ---- | -----------
 address | [address](#ripple-address) | The address of the account to find transactions for.
 options | object | *Optional* Options to filter the transactions to return.
 *options.* minLedgerVersion | integer | The lowest ledger version to search
