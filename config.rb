@@ -1,4 +1,20 @@
 # Markdown
+class SchemaRenderer < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+  end
+
+  helpers do
+    def render_table(json_schema_path)
+      path = "~/ripple/ripple-lib/src/common/schemas/"
+      `json-schema-to-markdown #{path}/#{json_schema_path} #{path}`;
+    end
+  end
+end
+
+::Middleman::Extensions.register(:schema_renderer, SchemaRenderer)
+activate :schema_renderer
+
 set :markdown_engine, :redcarpet
 set :markdown,
     fenced_code_blocks: true,
@@ -36,3 +52,4 @@ configure :build do
   # activate :asset_hash
   # activate :gzip
 end
+

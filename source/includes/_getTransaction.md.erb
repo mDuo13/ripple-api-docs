@@ -70,22 +70,10 @@ Retrieves a transaction by its identifier.
 
 ### Parameters
 
-Name | Type | Description
----- | ---- | -----------
-identifier | string | A Ripple transaction identifier, a 256-bit hash expressed as a hexadecimal string.
-options | object | Options to limit the ledger versions to search
-*options.* minLedgerVersion | integer | The lowest ledger version to search
-*options.* maxLedgerVersion | integer | The highest ledger version to search
+<%= render_table("input/get-transaction.json") %>
 
 ### Return Value
 
 This method returns a promise that resolves with a transaction object containing the following fields.
 
-Name | Type | Description
----- | ---- | -----------
-type | [type](#transaction-types) | Indicates the type of the transaction.
-specification | object | A [transaction specification](#transaction-specification)
-outcome | object | A [transaction outcome](#transaction-outcome)
-id | string | A [transaction identifier](#transaction-identifier)
-address | string | The [Ripple address](#ripple-address) of the account that created the transaction.
-sequence | integer | The [account sequence number](#account-sequence-number) of transaction
+<%= render_table("output/get-transaction.json") %>
