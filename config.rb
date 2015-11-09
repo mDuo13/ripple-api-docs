@@ -11,18 +11,18 @@ class SchemaRenderer < Middleman::Extension
       `json-schema-to-markdown #{file_path} #{base_path}`
     end
 
-    def render_request(method, return_name, parameter_name, fixture_filename)
+    def render_request(before, fixture_filename, after)
       base_path = "~/ripple/ripple-lib/test/fixtures/requests/"
       file_path = File.expand_path(File.join(base_path, fixture_filename))
-      "\n```javascript\nconst #{parameter_name} = " +
-        File.read(file_path) + ";\nreturn api.#{method}(#{parameter_name})" +
-        ".then(#{return_name} =>\n  {/* ... */});\n```\n"
+      contents = File.read(file_path).rstrip
+      "\n```javascript\n#{before}#{contents}#{after}\n```\n"
     end
 
     def render_response(fixture_filename)
       base_path = "~/ripple/ripple-lib/test/fixtures/responses/"
       file_path = File.expand_path(File.join(base_path, fixture_filename))
-      "\n```json\n" + File.read(file_path) + "\n```\n"
+      contents = File.read(file_path).rstrip
+      "\n```json\n#{contents}\n```\n"
     end
   end
 end

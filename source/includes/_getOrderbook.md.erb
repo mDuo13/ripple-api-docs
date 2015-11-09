@@ -1,0 +1,19 @@
+## getOrderbook
+
+`getOrderbook(address: string, orderbook: {base: {currency: string, counterparty: string}, counter: {currency: string, counterparty: string}, options: Object): Promise<{bids: Array<Object>, asks: Array<Object>>`
+
+<%= render_request("const address = 'r9UHu5CWni1qRY7Q4CfFZLGvXo2pGQy96b';\nconst orderbook = ", "get-orderbook.json", ";\nreturn api.getOrderbook(address, orderbook)\n  .then(orderbook => {/* ... */});") %>
+
+<%= render_response("get-orderbook.json") %>
+
+Returns open orders for the specified account. Open orders are orders that have not yet been fully executed and are still in the order book.
+
+### Parameters
+
+<%= render_table("input/get-orderbook.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an object with the following structure (Note: the structures of `bids` and `asks` are identical):
+
+<%= render_table("output/get-orderbook.json") %>

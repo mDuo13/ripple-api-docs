@@ -1,0 +1,23 @@
+## getOrders
+
+`getOrders(address: string, options: Object): Promise<Array<Object>>`
+
+```javascript
+const address = 'r9UHu5CWni1qRY7Q4CfFZLGvXo2pGQy96b';
+return api.getOrders(address).then(orders =>
+  {/* ... */});
+```
+
+<%= render_response("get-orders.json") %>
+
+Returns open orders for the specified account. Open orders are orders that have not yet been fully executed and are still in the order book.
+
+### Parameters
+
+<%= render_table("input/get-orders.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an array of objects with the following structure:
+
+<%= render_table("output/get-orders.json") %>

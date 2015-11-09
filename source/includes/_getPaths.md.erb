@@ -2,7 +2,7 @@
 
 `getPaths(pathfind: Object): Promise<Array<Object>>`
 
-<%= render_request("getPaths", "paths", "pathfind", "getpaths/normal.json") %>
+<%= render_request("const pathfind = ", "getpaths/normal.json", ";\nreturn api.getPaths(pathfind)\n  .then(paths => {/* ... */});") %>
 
 <%= render_response("get-paths.json") %>
 
