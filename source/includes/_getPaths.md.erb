@@ -1,0 +1,19 @@
+## getPaths
+
+`getPaths(pathfind: Object): Promise<Array<Object>>`
+
+<%= render_request("getPaths", "paths", "pathfind", "getpaths/normal.json") %>
+
+<%= render_response("get-paths.json") %>
+
+Finds paths to send a payment. Paths are options for how to route a payment.
+
+### Parameters
+
+<%= render_table("input/get-paths.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an array of objects with the following structure:
+
+<%= render_table("output/get-paths.json") %>

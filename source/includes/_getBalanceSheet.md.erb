@@ -1,0 +1,23 @@
+## getBalanceSheet
+
+`getBalanceSheet(address: string, options: Object): Promise<Object>`
+
+```javascript
+const address = 'r9UHu5CWni1qRY7Q4CfFZLGvXo2pGQy96b';
+return api.getBalanceSheet(address).then(balanceSheet =>
+  {/* ... */});
+```
+
+<%= render_response("get-balance-sheet.json") %>
+
+Returns aggregate balances by currency plus a breakdown of assets and obligations for a specified account.
+
+### Parameters
+
+<%= render_table("input/get-balance-sheet.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an array of objects with the following structure:
+
+<%= render_table("output/get-balance-sheet.json") %>
