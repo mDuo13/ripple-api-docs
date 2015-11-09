@@ -4,8 +4,6 @@
 return api.isConnected();
 ```
 
-> The return value will be a boolean like:
-
 ```json
 true
 ```

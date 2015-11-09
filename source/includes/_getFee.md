@@ -4,8 +4,6 @@
 return api.getFee().then(fee => {/* ... */});
 ```
 
-> `fee` is a number like this:
-
 ```json
 0.012
 ```

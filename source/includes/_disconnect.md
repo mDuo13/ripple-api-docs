@@ -1,8 +1,8 @@
 ## disconnect
 
-`disconnect(): Promise<void>`
-
 > See [Boilerplate](#boilerplate) for code sample
+
+`disconnect(): Promise<void>`
 
 Tells the RippleAPI instance to disconnect from its server(s).
 

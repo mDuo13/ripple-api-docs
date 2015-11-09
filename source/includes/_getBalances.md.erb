@@ -1,0 +1,23 @@
+## getBalances
+
+`getBalances(address: string, options: Object): Promise<Array<Object>>`
+
+```javascript
+const address = 'r9UHu5CWni1qRY7Q4CfFZLGvXo2pGQy96b';
+return api.getBalances(address).then(balances =>
+  {/* ... */});
+```
+
+<%= render_example("get-balances.json") %>
+
+Returns balances for a specified account.
+
+### Parameters
+
+<%= render_table("input/get-trustlines.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an array of objects with the following structure:
+
+<%= render_table("output/get-balances.json") %>

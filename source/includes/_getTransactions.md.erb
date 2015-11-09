@@ -1,0 +1,22 @@
+## getTransactions
+
+```javascript
+const address = 'r9UHu5CWni1qRY7Q4CfFZLGvXo2pGQy96b';
+return api.getTransactions(address).then(transaction => {
+  /* ... */
+});
+```
+
+<%= render_example("get-transactions.json") %>
+
+`getTransactions(address: string, options: Object): Promise<Array<Object>>`
+
+Retrieves historical transactions of an account.
+
+### Parameters
+
+<%= render_table("input/get-transactions.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an array of transaction object in the same format as [getTransaction](#gettransaction).

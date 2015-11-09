@@ -6,8 +6,6 @@ return api.getLedgerVersion().then(ledgerVersion => {
 });
 ```
 
-> `ledgerVersion` is an integer like this:
-
 ```json
 16869039
 ```

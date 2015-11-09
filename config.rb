@@ -6,8 +6,15 @@ class SchemaRenderer < Middleman::Extension
 
   helpers do
     def render_table(json_schema_path)
-      path = "~/ripple/ripple-lib/src/common/schemas/"
-      `json-schema-to-markdown #{path}/#{json_schema_path} #{path}`;
+      base_path = "~/ripple/ripple-lib/src/common/schemas/"
+      file_path = File.expand_path(File.join(base_path, json_schema_path))
+      `json-schema-to-markdown #{file_path} #{base_path}`
+    end
+
+    def render_example(fixture_filename)
+      base_path = "~/ripple/ripple-lib/test/fixtures/responses/"
+      file_path = File.expand_path(File.join(base_path, fixture_filename))
+      "\n```json\n" + File.read(file_path) + "\n```\n"
     end
   end
 end

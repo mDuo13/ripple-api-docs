@@ -1,8 +1,8 @@
 ## connect
 
-`connect(): Promise<void>`
-
 > See [Boilerplate](#boilerplate) for code sample
+
+`connect(): Promise<void>`
 
 Tells the RippleAPI instance to connect to its server(s).
 
