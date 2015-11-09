@@ -1,0 +1,19 @@
+## preparePayment
+
+`preparePayment(address: string, payment: Object instructions: Object): Promise<Object>`
+
+<%= render_prepare_request("payment", "prepare-payment.json") %>
+
+<%= render_response("prepare-payment.json") %>
+
+Prepare a payment transaction. The prepared payment must subsequently be [signed](#sign) and [submitted](#submit).
+
+### Parameters
+
+<%= render_table("input/prepare-payment.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an object with the following structure (Note: all "prepare" methods have the same return value format):
+
+<%= render_table("output/prepare.json") %>

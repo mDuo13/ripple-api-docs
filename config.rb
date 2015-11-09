@@ -18,6 +18,15 @@ class SchemaRenderer < Middleman::Extension
       "\n```javascript\n#{before}#{contents}#{after}\n```\n"
     end
 
+    def render_prepare_request(tx_type, fixture_filename)
+      method = "prepare" + tx_type[0].capitalize + tx_type[1..-1]
+      before = "const address = 'r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59';\n" +
+        "const #{tx_type} = "
+      after = ";\nreturn api.#{method}(address, #{tx_type})\n  .then(prepared" +
+        " => {/* ... */});"
+      render_request(before, fixture_filename, after)
+    end
+
     def render_response(fixture_filename)
       base_path = "~/ripple/ripple-lib/test/fixtures/responses/"
       file_path = File.expand_path(File.join(base_path, fixture_filename))
