@@ -1,0 +1,23 @@
+## getAccountInfo
+
+`getAccountInfo(address: string, options: Object): Promise<Object>`
+
+```javascript
+const address = 'r9UHu5CWni1qRY7Q4CfFZLGvXo2pGQy96b';
+return api.getAccountInfo(address).then(info =>
+  {/* ... */});
+```
+
+<%= render_response("get-account-info.json") %>
+
+Returns information for the specified account. Note: For account data that is modifiable by the user, see [getSettings](#getsettings).
+
+### Parameters
+
+<%= render_table("input/get-settings.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an array of objects with the following structure (Note: all fields are optional as they will not be shown if they are set to their default value):
+
+<%= render_table("output/get-account-info.json") %>
