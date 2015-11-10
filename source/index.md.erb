@@ -8,6 +8,12 @@ toc_footers:
   - <a href='http://ripple.com'>Ripple</a>
 
 includes:
+- introduction
+- boilerplate
+- concepts
+- transactions
+- specifications
+- methods
 - connect
 - disconnect
 - isConnected
@@ -40,76 +46,3 @@ includes:
 
 search: true
 ---
-
-# Introduction
-
-RippleAPI allows you to query and submit transactions to a node on the Ripple network.
-
-The API is based on ES6 promises.
-
-The API only provides access to *validated* transaction data.
-
-# Boilerplate
-
-```javascript
-const {RippleAPI} = require('ripple-lib');
-
-const api = new RippleAPI({
-  servers: ['wss://s1.ripple.com']
-});
-api.connect().then(() => {
-  /* insert code here */
-}).then(() => {
-  return api.disconnect();
-}).catch(console.error);
-```
-
-All the code snippets assume that you have surrounded them with this boilerplate.
-
-<aside class="notice">
-Dont forget the "catch" or errors may not be visible.
-</aside>
-
-# Concepts
-
-## Ripple Address
-
-Every Ripple account has an address
-
-## Account Sequence Number
-
-Every account has a sequence number that is used to order transactions.
-
-## Transaction Types
-
-A transaction type is specified by the strings in the first column in the table below.
-
-Type | Description
----- | -----------
-payment | A payment
-order | Order
-orderCancellation | Order cancellation
-trustline | Trustline
-settings | Settings
-suspendedPaymentCreation | ...
-suspendedPaymentCancellation | ...
-suspendedPaymentExecution | ...
-
-## Transaction Identifier
-
-A hash of the transaction that can be used to identify it.
-
-## Transaction Specification
-
-Specifies a transaction
-
-## Transaction Instructions
-
-Instructions on how to execute a transaction, complements the [transaction specificaition](#transaction-specification).
-
-## Transaction Outcome
-
-Indicates the outcome of a transaction.
-
-# API Methods
-

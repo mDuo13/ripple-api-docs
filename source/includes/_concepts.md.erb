@@ -1,0 +1,38 @@
+# Basic Types
+
+## Ripple Address
+
+```json
+"r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59"
+```
+
+Every Ripple account has an address, which is a base58-encoding of a hash of the account's public key.
+
+## Account Sequence Number
+
+Every Ripple account has a sequence number that is used to order transactions. Every transaction must have a sequence number and transaction can only be executed in order by sequence number. This prevents one transaction from executing twice and transactions executing out of order.
+
+## Currency
+
+Currencies are represented as either 3-character currency codes or 40-character uppercase hexadecimal strings. We recommend using uppercase [ISO 4217 Currency Codes](http://www.xe.com/iso4217.php) only. The string "XRP" is disallowed. The following characters are permitted: all uppercase and lowercase letters, digits, as well as the symbols `?`, `!`, `@`, `#`, `$`, `%`, `^`, `&`, `*`, `<`, `>`, `(`, `)`, `{`, `}`, `[`, `]`, and `|`.
+
+## Amount
+
+```json
+{
+  "currency": "USD",
+  "counterparty": "rMH4UxPrbuMa1spCBR98hLLyNJp4d8p4tM",
+  "value": "100"
+}
+```
+
+```json
+{
+  "currency": "XRP",
+  "value": "2000"
+}
+```
+
+Represents an amount of a currency. 
+
+<%= render_table("objects/amount-base.json") %>

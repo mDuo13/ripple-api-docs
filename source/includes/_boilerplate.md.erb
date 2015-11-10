@@ -1,0 +1,25 @@
+## Boilerplate
+
+`npm install ripple-lib`
+
+The code samples in this documentation are written in ES6, but `RippleAPI` will work with ES5 also. If you want to use ES6, you can use [babel](https://babeljs.io).
+
+```javascript
+const {RippleAPI} = require('ripple-lib');
+
+const api = new RippleAPI({
+  servers: ['wss://s1.ripple.com']
+});
+api.connect().then(() => {
+  /* insert code here */
+}).then(() => {
+  return api.disconnect();
+}).catch(console.error);
+```
+
+All the code snippets assume that you have surrounded them with this boilerplate.
+
+<aside class="notice">
+Dont forget the "catch" or errors may not be visible.
+</aside>
+
