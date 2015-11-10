@@ -1,0 +1,22 @@
+## generateAddress
+
+`generateAddress(): {address: string, secret: string}`
+
+```javascript
+return api.generateAddress()
+  .then(result => {/* ... */});
+```
+
+<%= render_response("generate-address.json") %>
+
+Generate a new Ripple address and corresponding secret.
+
+### Parameters
+
+This method has no parameters.
+
+### Return Value
+
+This method returns an object with the following structure:
+
+<%= render_table("output/generate-address.json") %>
