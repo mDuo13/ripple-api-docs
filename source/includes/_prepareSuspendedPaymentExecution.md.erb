@@ -1,0 +1,23 @@
+## prepareSuspendedPaymentExecution
+
+`prepareSuspendedPaymentExecution(address: string, suspendedPaymentExecution: Object, instructions: Object): Promise<Object>`
+
+<%= render_prepare_request("suspendedPaymentExecution", "prepare-suspended-payment-execution.json") %>
+
+<%= render_response("prepare-suspended-payment-execution.json") %>
+
+Prepare a suspended payment execution transaction. The prepared transaction must subsequently be [signed](#sign) and [submitted](#submit).
+
+### Parameters
+
+<%= render_table("input/prepare-suspended-payment-execution.json") %>
+
+### Return Value
+
+This method returns a promise that resolves with an object with the following structure:
+
+<aside class="notice">
+All "prepare*" methods have the same return type.
+</aside>
+
+<%= render_table("output/prepare.json") %>
