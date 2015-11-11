@@ -38,6 +38,10 @@ An XRP value has 6 significant digits past the decimal point. A non-XRP value ha
 }
 ```
 
-An *amount* is data structure representing a currency, a quantity of that currency, and the counterparty on the trustline that holds the value (for all currencies besides "XRP"). A *lax amount* allows the counterparty to be omitted for all currencies. A *lax lax amount* allows either or both the counterparty and value to be omitted.
+An *amount* is data structure representing a currency, a quantity of that currency, and the counterparty on the trustline that holds the value (for all currencies besides "XRP").
+
+A *lax amount* allows the counterparty to be omitted for all currencies. If the counterparty is not specified in an amount within a transaction specification, then any counterparty may be used for that amount.
+
+A *lax lax amount* allows either or both the counterparty and value to be omitted.
 
 <%= render_table("objects/amount-base.json") %>
