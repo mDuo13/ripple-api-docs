@@ -9,9 +9,9 @@ return api.getTransaction(id).then(transaction => {
 
 <%= render_response("get-transaction-payment.json") %>
 
-`getTransaction(identifier: string, options: Object): Promise<Object>`
+`getTransaction(id: string, options: Object): Promise<Object>`
 
-Retrieves a transaction by its identifier.
+Retrieves a transaction by its [Transaction ID](#transaction-id).
 
 ### Parameters
 
