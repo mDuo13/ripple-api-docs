@@ -2,7 +2,7 @@
 
 `getOrderbook(address: string, orderbook: {base: {currency: string, counterparty: string}, counter: {currency: string, counterparty: string}, options: Object): Promise<{bids: Array<Object>, asks: Array<Object>>`
 
-<%= render_request("const address = 'r9UHu5CWni1qRY7Q4CfFZLGvXo2pGQy96b';\nconst orderbook = ", "get-orderbook.json", ";\nreturn api.getOrderbook(address, orderbook)\n  .then(orderbook => {/* ... */});") %>
+<%= render_request("const address = 'r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59';\nconst orderbook = ", "get-orderbook.json", ";\nreturn api.getOrderbook(address, orderbook)\n  .then(orderbook => {/* ... */});") %>
 
 <%= render_response("get-orderbook.json") %>
 
