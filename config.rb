@@ -5,15 +5,20 @@ class SchemaRenderer < Middleman::Extension
   end
 
   helpers do
+    def build_path(path)
+      root_path = File.expand_path(File.dirname(__FILE__));
+      File.join(root_path, 'ripple-lib', path)
+    end
+
     def render_table(json_schema_path)
-      base_path = "~/ripple/ripple-lib/src/common/schemas/"
-      file_path = File.expand_path(File.join(base_path, json_schema_path))
-      `json-schema-to-markdown #{file_path} #{base_path}`
+      schemas_path = build_path("src/common/schemas/")
+      file_path = File.join(schemas_path, json_schema_path)
+      `json-schema-to-markdown #{file_path} #{schemas_path}`
     end
 
     def render_request(before, fixture_filename, after)
-      base_path = "~/ripple/ripple-lib/test/fixtures/requests/"
-      file_path = File.expand_path(File.join(base_path, fixture_filename))
+      file_path = build_path(File.join("test/fixtures/requests",
+        fixture_filename))
       contents = File.read(file_path).rstrip
       "\n```javascript\n#{before}#{contents}#{after}\n```\n"
     end
@@ -28,8 +33,8 @@ class SchemaRenderer < Middleman::Extension
     end
 
     def render_response(fixture_filename)
-      base_path = "~/ripple/ripple-lib/test/fixtures/responses/"
-      file_path = File.expand_path(File.join(base_path, fixture_filename))
+      file_path = build_path(File.join("test/fixtures/responses/",
+        fixture_filename))
       contents = File.read(file_path).rstrip
       "\n```json\n#{contents}\n```\n"
     end
