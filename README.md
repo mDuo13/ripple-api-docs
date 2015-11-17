@@ -26,12 +26,6 @@ You're going to need:
 
 You can now see the docs at <http://localhost:4567>.
 
-## Updating JSON Schemas
-
-The markdown tables are automatically generated from the JSON files in the
-`ripple-lib` subtree. This git subtree must be updated periodically with the
-following command: `git subtree pull --prefix ripple-lib git@github.com:ripple/ripple-lib.git develop --squash`.
-
 ## Editing Slate Markdown
 
 [Slate Markdown Syntax](https://github.com/tripit/slate/wiki/Markdown-Syntax)
