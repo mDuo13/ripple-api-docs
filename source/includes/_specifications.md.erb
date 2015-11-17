@@ -4,11 +4,15 @@ A *transaction specification* specifies what a transaction should do. Each [Tran
 
 ## Payment
 
+<%= render_json("requests/prepare-payment.json") %>
+
 See [Transcation Types](#transaction-types) for a description.
 
 <%= render_table("specifications/payment.json") %>
 
 ## Trustline
+
+<%= render_json("requests/prepare-trustline.json") %>
 
 See [Transcation Types](#transaction-types) for a description.
 
@@ -16,11 +20,15 @@ See [Transcation Types](#transaction-types) for a description.
 
 ## Order
 
+<%= render_json("requests/prepare-order.json") %>
+
 See [Transcation Types](#transaction-types) for a description.
 
 <%= render_table("specifications/order.json") %>
 
 ## Order Cancellation
+
+<%= render_json("requests/prepare-order-cancellation.json") %>
 
 See [Transcation Types](#transaction-types) for a description.
 
@@ -28,11 +36,15 @@ See [Transcation Types](#transaction-types) for a description.
 
 ## Settings
 
+<%= render_json("requests/prepare-settings.json") %>
+
 See [Transcation Types](#transaction-types) for a description.
 
 <%= render_table("output/get-settings.json") %>
 
 ## Suspended Payment Creation
+
+<%= render_json("requests/prepare-suspended-payment-creation.json") %>
 
 See [Transcation Types](#transaction-types) for a description.
 
@@ -40,11 +52,15 @@ See [Transcation Types](#transaction-types) for a description.
 
 ## Suspended Payment Cancellation
 
+<%= render_json("requests/prepare-suspended-payment-cancellation.json") %>
+
 See [Transcation Types](#transaction-types) for a description.
 
 <%= render_table("specifications/suspended-payment-cancellation.json") %>
 
 ## Suspended Payment Execution
+
+<%= render_json("requests/prepare-suspended-payment-execution.json") %>
 
 See [Transcation Types](#transaction-types) for a description.
 

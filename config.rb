@@ -32,11 +32,14 @@ class SchemaRenderer < Middleman::Extension
       render_request(before, fixture_filename, after)
     end
 
-    def render_response(fixture_filename)
-      file_path = build_path(File.join("test/fixtures/responses/",
-        fixture_filename))
+    def render_json(fixture_filename)
+      file_path = build_path(File.join("test/fixtures/", fixture_filename))
       contents = File.read(file_path).rstrip
       "\n```json\n#{contents}\n```\n"
+    end
+
+    def render_response(fixture_filename)
+      render_json(File.join("responses", fixture_filename))
     end
   end
 end
